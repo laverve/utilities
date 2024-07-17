@@ -33,7 +33,7 @@
         "LICENSE"
     ],
     "publishConfig": {
-        "access": "restricted"
+        "access": "public"
     },
     "scripts": {
         "lint": "eslint --ext .js,.ts,.tsx,.json .",
