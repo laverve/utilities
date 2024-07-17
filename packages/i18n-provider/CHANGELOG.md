@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2024-07-17)
+
+### chore
+
+-   adds packages ([b34dcac](https://github.com/laverve/utilities/commit/b34dcacd96239ace9ab9558e3cf0047a0785c628))
+
+### BREAKING CHANGES
+
+-   moved packages from a common repo
+
 ## 1.0.10 (2024-07-16)
 
 **Note:** Version bump only for package @laverve/i18n-provider
