@@ -11,7 +11,6 @@
     "devDependencies": {
         "@eslint/js": "^9.7.0",
         "@types/react": "^18.2.21",
-        "@types/uuid": "^9.0.4",
         "browserslist": "^4.22.1",
         "copyfiles": "^2.4.1",
         "eslint": "^9.7.0",
@@ -19,8 +18,8 @@
         "eslint-plugin-jsonc": "^2.16.0",
         "eslint-plugin-prettier": "^5.2.1",
         "globals": "^15.8.0",
-        "husky": "^8.0.3",
-        "lerna": "^7.2.0",
+        "husky": "^9.1.1",
+        "lerna": "^8.1.6",
         "lint-staged": "^15.1.0",
         "prettier": "^3.0.3",
         "snapshot-diff": "^0.10.0",
