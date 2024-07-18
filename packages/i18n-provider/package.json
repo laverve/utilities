@@ -37,6 +37,7 @@
         "access": "public"
     },
     "scripts": {
+        "postinstall": "npm run build",
         "lint": "eslint .",
         "lint:staged": "lint-staged",
         "test": "jest --passWithNoTests",
