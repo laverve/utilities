@@ -10,7 +10,7 @@
                 "**/.vscode/**",
                 "**/apps/**",
                 ".envrc",
-                ".eslintrc.js",
+                "eslint.config.js",
                 ".gitignore",
                 ".npmrc",
                 ".nvmrc",

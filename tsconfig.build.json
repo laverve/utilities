@@ -8,12 +8,13 @@
         "forceConsistentCasingInFileNames": true,
         "incremental": true,
         "jsx": "react",
-        "module": "commonjs",
+        "module": "ESNext",
+        "moduleResolution": "Node",
         "outDir": "./dist/",
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
-        "target": "ES2021"
+        "target": "ESNext"
     },
     "exclude": ["**/*.test.ts", "**/*.stub.ts", "node_modules", "dist"],
     "references": [

@@ -18,5 +18,16 @@ export const jestConfig: Config = {
     watchPlugins: ["jest-watch-typeahead/filename", "jest-watch-typeahead/testname"],
     setupFiles: ["react-app-polyfill/jsdom"],
     resetMocks: true,
-    setupFilesAfterEnv: ["@laverve/test-utils/dist/src/setupTests.js"]
+    setupFilesAfterEnv: ["@laverve/test-utils/dist/src/setupTests.js"],
+    extensionsToTreatAsEsm: [".ts"],
+    transform: {
+        // '^.+\\.[tj]sx?$' to process ts,js,tsx,jsx with `ts-jest`
+        // '^.+\\.m?[tj]sx?$' to process ts,js,tsx,jsx,mts,mjs,mtsx,mjsx with `ts-jest`
+        "^.+\\.tsx?$": [
+            "ts-jest",
+            {
+                useESM: true
+            }
+        ]
+    }
 };

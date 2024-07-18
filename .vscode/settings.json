@@ -6,11 +6,8 @@
     "eslint.workingDirectories": [
         ".",
         {
-            "pattern": "./packages/*/*/"
+            "pattern": "./packages/*/"
         },
-        {
-            "pattern": "./apps/*/"
-        }
     ],
     "jest.jestCommandLine": ""
 }
