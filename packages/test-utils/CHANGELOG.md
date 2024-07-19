@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2024-07-19)
+
+-   fix!: removes setupTests.ts from default jest config ([d1e8a02](https://github.com/laverve/utilities/commit/d1e8a021f66f9fe5b6f61b29eb285c0e330ea65d))
+
+### BREAKING CHANGES
+
+-   setupFilesAfterEnv is removed
+
 ## 2.0.7 (2024-07-18)
 
 **Note:** Version bump only for package @laverve/test-utils
