@@ -10,12 +10,10 @@
                 "**/.vscode/**",
                 "**/apps/**",
                 ".envrc",
-                "eslint.config.js",
                 ".gitignore",
                 ".npmrc",
                 ".nvmrc",
                 ".prettierrc.json",
-                "jest.config.ts",
                 "lerna.json",
                 "lint-stageed.config.json",
                 "package-lock.json",
@@ -25,9 +23,8 @@
                 "tsconfig.eslint.json",
                 "tsconfig.json",
                 "**/*.spec.ts"
-            ],
-            "syncDistVersion": true
+            ]
         }
     },
-    "version": "3.0.1"
+    "version": "independent"
 }
