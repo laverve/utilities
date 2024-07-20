@@ -3,6 +3,7 @@ import globals from "globals";
 import eslintPluginJsonc from "eslint-plugin-jsonc";
 import tseslint from "typescript-eslint";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import reactPlugin from "eslint-plugin-react";
 
 export const config = [
     js.configs.recommended,
@@ -12,6 +13,19 @@ export const config = [
         ...config,
         files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"]
     })),
+    {
+        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+        ...reactPlugin.configs.flat.recommended
+    },
+    {
+        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+        languageOptions: {
+            globals: {
+                ...globals.serviceworker,
+                ...globals.browser
+            }
+        }
+    },
     {
         languageOptions: {
             globals: {
