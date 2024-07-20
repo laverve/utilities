@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2024-07-20)
+
+-   feat!: adds eslint-plugin-react (#6) ([b9dac9d](https://github.com/laverve/utilities/commit/b9dac9d4e665c286db195bb0b6f465d629f83349)), closes [#6](https://github.com/laverve/utilities/issues/6)
+
+### BREAKING CHANGES
+
+-   adds eslint-plugin-react into eslint config
+
 ## 3.0.1 (2024-07-19)
 
 **Note:** Version bump only for package @laverve/eslint-utils
