@@ -6,12 +6,12 @@ on:
 
 permissions:
     contents: write
+    pages: write
     id-token: write
 
 env:
     TARGET_ENVIRONMENT: production
     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
     lint:
@@ -45,6 +45,9 @@ jobs:
 
         runs-on: ubuntu-latest
 
+        outputs:
+            tag: ${{ steps.versionBump.outputs.tag }}
+
         steps:
             - uses: actions/checkout@v4
             - name: Use Node.js
@@ -54,5 +57,21 @@ jobs:
                   cache: "npm"
             - uses: ./.github/actions/install
             - uses: ./.github/actions/version-bump
+              id: versionBump
               with:
                   actor: "github-actions[bot]"
+            - run: echo "Output Version ${{ steps.versionBump.outputs.tag }}"
+
+    draftRelease:
+        needs: version
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                ref: ${{ needs.version.outputs.tag }}
+            - name: Draft release
+              run: ${{ format('{0}/.github/scripts/release-drafter.sh', github.workspace) }} "${{ needs.version.outputs.tag }}"
+              env:
+                GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
