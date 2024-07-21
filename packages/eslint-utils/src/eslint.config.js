@@ -98,5 +98,12 @@ export const config = eslintTs.config(
         rules: {
             "jsonc/sort-keys": "off"
         }
+    },
+    {
+        files: ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+
+        rules: {
+            "i18next/no-literal-string": 0
+        }
     }
 );
