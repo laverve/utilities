@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.0.0 (2024-07-21)
+
+-   chore!: adds eslint-plugin-import and eslint-plugin-i18next (#7) ([c301d10](https://github.com/laverve/utilities/commit/c301d10b7ebfc3e0fd2af3d24f1c8e51a6ae3d34)), closes [#7](https://github.com/laverve/utilities/issues/7)
+
+### BREAKING CHANGES
+
+-   added plugins to lint imports and i18next
+
+-   chore: turns off `i18next/no-literal-string` rule for spec files
+
+-   chore: adds more custom rules
+
 ## 4.0.3 (2024-07-21)
 
 **Note:** Version bump only for package @laverve/eslint-utils

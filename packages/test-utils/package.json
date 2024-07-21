@@ -49,6 +49,6 @@
         "lint:staged": "lint-staged",
         "build": "tsc"
     },
-    "version": "4.0.3",
+    "version": "5.0.0",
     "webpack": "./src/index.ts"
 }
