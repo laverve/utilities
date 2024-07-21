@@ -45,6 +45,17 @@ export const config = eslintTs.config(
     },
     eslintJs.configs.recommended,
     eslintPluginPrettierRecommended,
+    {
+        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+        languageOptions: {
+            globals: {
+                ...globals.serviceworker,
+                ...globals.browser,
+                ...globals.node,
+                ...globals.es2025
+            }
+        }
+    },
     ...eslintPluginJsonc.configs["flat/recommended-with-jsonc"],
     ...eslintTs.configs.recommended.map((config) => ({
         ...config,
@@ -70,35 +81,28 @@ export const config = eslintTs.config(
             import: legacyPlugin("eslint-plugin-import", "import"),
             i18next: legacyPlugin("eslint-plugin-i18next", "i18next")
         },
-        rules: {}
+        rules: {
+            "import/prefer-default-export": 0,
+            "import/no-extraneous-dependencies": 0
+        }
     },
     {
         files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
-        ...reactPlugin.configs.flat.recommended
-    },
-    {
-        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
-        languageOptions: {
-            globals: {
-                ...globals.serviceworker,
-                ...globals.browser,
-                ...globals.node,
-                ...globals.es2025
-            }
+        ...reactPlugin.configs.flat.recommended,
+        rules: {
+            ...reactPlugin.configs.flat.recommended.rules,
+            "react/require-default-props": 0,
+            "react/function-component-definition": [
+                2,
+                { namedComponents: "arrow-function", unnamedComponents: "arrow-function" }
+            ]
         }
     },
     {
         rules: {
             "prettier/prettier": "error",
             "jsonc/sort-keys": "error",
-            "no-plusplus": 0,
-            "import/prefer-default-export": 0,
-            "import/no-extraneous-dependencies": 0,
-            "react/function-component-definition": [
-                2,
-                { namedComponents: "arrow-function", unnamedComponents: "arrow-function" }
-            ],
-            "react/require-default-props": 0
+            "no-plusplus": 0
         }
     },
     {
