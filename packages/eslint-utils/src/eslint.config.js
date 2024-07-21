@@ -1,46 +1,39 @@
-import js from "@eslint/js";
+import eslintJs from "@eslint/js";
 import globals from "globals";
 import eslintPluginJsonc from "eslint-plugin-jsonc";
-import tseslint from "typescript-eslint";
+import eslintTs from "typescript-eslint";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import reactPlugin from "eslint-plugin-react";
 
-export const config = [
-    js.configs.recommended,
-    eslintPluginPrettierRecommended,
-    ...eslintPluginJsonc.configs["flat/recommended-with-jsonc"],
-    ...tseslint.configs.recommended.map((config) => ({
-        ...config,
-        files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"]
-    })),
-    {
-        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
-        ...reactPlugin.configs.flat.recommended
-    },
-    {
-        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
-        languageOptions: {
-            globals: {
-                ...globals.serviceworker,
-                ...globals.browser
-            }
-        }
-    },
-    {
-        languageOptions: {
-            globals: {
-                ...globals.browser,
-                ...globals.node,
-                ...globals.es2025
-            }
-        },
+import { fixupPluginRules } from "@eslint/compat";
+import { FlatCompat } from "@eslint/eslintrc";
 
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+
+const project = "./tsconfig.eslint.json";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const compat = new FlatCompat({
+    baseDirectory: __dirname,
+    recommendedConfig: eslintJs.configs.recommended
+});
+
+function legacyPlugin(name, alias = name) {
+    const plugin = compat.plugins(name)[0]?.plugins?.[alias];
+
+    if (!plugin) {
+        throw new Error(`Unable to resolve plugin ${name} and/or alias ${alias}`);
+    }
+
+    return fixupPluginRules(plugin);
+}
+
+export const config = eslintTs.config(
+    {
         ignores: [
-            "node_modules/*",
-            "**/node_modules/*",
-            "**/dist/**/*",
-            "dist/*",
-            "./dist/**/*",
+            "dist/",
+            "node_modules/",
             "package-lock.json",
             "**/*.snap",
             "**/*.svg",
@@ -50,10 +43,66 @@ export const config = [
             "**/*.css"
         ]
     },
+    eslintJs.configs.recommended,
+    eslintPluginPrettierRecommended,
+    {
+        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+        languageOptions: {
+            globals: {
+                ...globals.serviceworker,
+                ...globals.browser,
+                ...globals.node,
+                ...globals.es2025
+            }
+        }
+    },
+    ...eslintPluginJsonc.configs["flat/recommended-with-jsonc"],
+    ...eslintTs.configs.recommended.map((config) => ({
+        ...config,
+        files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"]
+    })),
+    ...compat.extends("plugin:import/typescript"),
+    {
+        languageOptions: {
+            parserOptions: {
+                project,
+                tsconfigRootDir: import.meta.dirname
+            }
+        },
+        settings: {
+            "import/resolver": {
+                typescript: {
+                    alwaysTryTypes: true,
+                    project
+                }
+            }
+        },
+        plugins: {
+            import: legacyPlugin("eslint-plugin-import", "import"),
+            i18next: legacyPlugin("eslint-plugin-i18next", "i18next")
+        },
+        rules: {
+            "import/prefer-default-export": 0,
+            "import/no-extraneous-dependencies": 0
+        }
+    },
+    {
+        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+        ...reactPlugin.configs.flat.recommended,
+        rules: {
+            ...reactPlugin.configs.flat.recommended.rules,
+            "react/require-default-props": 0,
+            "react/function-component-definition": [
+                2,
+                { namedComponents: "arrow-function", unnamedComponents: "arrow-function" }
+            ]
+        }
+    },
     {
         rules: {
             "prettier/prettier": "error",
-            "jsonc/sort-keys": "error"
+            "jsonc/sort-keys": "error",
+            "no-plusplus": 0
         }
     },
     {
@@ -63,19 +112,10 @@ export const config = [
         }
     },
     {
-        ignores: [
-            "node_modules/*",
-            "**/node_modules/*",
-            "**/dist/**/*",
-            "dist/*",
-            "./dist/**/*",
-            "package-lock.json",
-            "**/*.snap",
-            "**/*.svg",
-            "**/*.png",
-            "**/*.jpg",
-            "**/*.jpeg",
-            "**/*.css"
-        ]
+        files: ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+
+        rules: {
+            "i18next/no-literal-string": 0
+        }
     }
-];
+);
