@@ -1,5 +1,5 @@
 {
-    "exclude": ["./**/*.png", "./**/*.gif", "./**/*.css", "./**/*.svg", "./**/*.jpeg"],
+    "exclude": ["./**/*.png", "./**/*.gif", "./**/*.css", "./**/*.svg", "./**/*.jpeg", "./dist/**/*"],
     "extends": "../../tsconfig.eslint.json",
     "include": [
         "./*.js",

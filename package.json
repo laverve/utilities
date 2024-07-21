@@ -43,8 +43,8 @@
     "scripts": {
         "postinstall": "npm run build",
         "build": "lerna run build",
-        "lint": "eslint lerna.json package.json tsconfig*.json *.ts && lerna run lint",
-        "lint:fix": "eslint --fix && lerna run lint -- --fix",
+        "lint": "eslint lerna.json package.json tsconfig*.json *.js && lerna run lint",
+        "lint:fix": "eslint lerna.json package.json tsconfig*.json *.js --fix && lerna run lint -- --fix",
         "lint:staged": "lint-staged && lerna run lint:staged --since=origin/main --concurrency=1",
         "prepare": "husky install",
         "publish": "lerna publish --no-private",
