@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.1 (2024-07-23)
+
+### Bug Fixes
+
+-   improves eslint configuration ([#10](https://github.com/laverve/utilities/issues/10)) ([313f160](https://github.com/laverve/utilities/commit/313f1601615df78c6fdf4659962c8ead2500daa8))
+
 # 5.0.0 (2024-07-21)
 
 -   chore!: adds eslint-plugin-import and eslint-plugin-i18next (#7) ([c301d10](https://github.com/laverve/utilities/commit/c301d10b7ebfc3e0fd2af3d24f1c8e51a6ae3d34)), closes [#7](https://github.com/laverve/utilities/issues/7)
