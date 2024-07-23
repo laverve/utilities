@@ -4,6 +4,7 @@ import eslintPluginJsonc from "eslint-plugin-jsonc";
 import eslintTs from "typescript-eslint";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import reactPlugin from "eslint-plugin-react";
+import i18next from "eslint-plugin-i18next";
 
 import { fixupPluginRules } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
@@ -44,7 +45,6 @@ export const config = eslintTs.config(
         ]
     },
     eslintJs.configs.recommended,
-    eslintPluginPrettierRecommended,
     {
         files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
         languageOptions: {
@@ -56,7 +56,6 @@ export const config = eslintTs.config(
             }
         }
     },
-    ...eslintPluginJsonc.configs["flat/recommended-with-jsonc"],
     ...eslintTs.configs.recommended.map((config) => ({
         ...config,
         files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"]
@@ -78,17 +77,27 @@ export const config = eslintTs.config(
             }
         },
         plugins: {
-            import: legacyPlugin("eslint-plugin-import", "import"),
-            i18next: legacyPlugin("eslint-plugin-i18next", "i18next")
+            import: legacyPlugin("eslint-plugin-import", "import")
         },
         rules: {
             "import/prefer-default-export": 0,
             "import/no-extraneous-dependencies": 0
         }
     },
+    // START: prettier
     {
-        files: ["**/*.{js,mjs,cjs,jsx,mjsx,ts,tsx,mtsx}"],
+        ...eslintPluginPrettierRecommended
+    },
+    // END: prettier
+    // START: react
+    {
+        files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}"],
         ...reactPlugin.configs.flat.recommended,
+        settings: {
+            react: {
+                version: "detect"
+            }
+        },
         rules: {
             ...reactPlugin.configs.flat.recommended.rules,
             "react/require-default-props": 0,
@@ -98,9 +107,26 @@ export const config = eslintTs.config(
             ]
         }
     },
+    // END: react
+    // START: i18next
+    {
+        plugins: { i18next },
+        rules: {
+            "i18next/no-literal-string": ["error"]
+        }
+    },
+    {
+        files: ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+
+        rules: {
+            "i18next/no-literal-string": 0
+        }
+    },
+    // END: i18next
+    // START: jsonc
+    ...eslintPluginJsonc.configs["flat/recommended-with-jsonc"],
     {
         rules: {
-            "prettier/prettier": "error",
             "jsonc/sort-keys": "error",
             "no-plusplus": 0
         }
@@ -110,12 +136,6 @@ export const config = eslintTs.config(
         rules: {
             "jsonc/sort-keys": "off"
         }
-    },
-    {
-        files: ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
-
-        rules: {
-            "i18next/no-literal-string": 0
-        }
     }
+    // END: jsonc
 );
