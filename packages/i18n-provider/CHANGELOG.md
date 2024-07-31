@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.5 (2024-07-31)
+
+### Bug Fixes
+
+-   disables i18nex/no-literal-string rule for stories ([#18](https://github.com/laverve/utilities/issues/18)) ([075a3a4](https://github.com/laverve/utilities/commit/075a3a47baebcabf1ad90792fadaa4bec27a3b17))
+
 ## 5.0.4 (2024-07-31)
 
 **Note:** Version bump only for package @laverve/i18n-provider
