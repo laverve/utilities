@@ -116,7 +116,7 @@ export const config = eslintTs.config(
         }
     },
     {
-        files: ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+        files: ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx", "*.story.tsx"],
 
         rules: {
             "i18next/no-literal-string": 0
