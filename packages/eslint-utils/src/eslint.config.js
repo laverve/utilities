@@ -116,8 +116,7 @@ export const config = eslintTs.config(
         }
     },
     {
-        files: ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx", "*.story.tsx"],
-
+        files: ["**/*.spec.ts", "**/*.spec.tsx", "**/*.spec.js", "**/*.spec.jsx", "**/*.story.tsx"],
         rules: {
             "i18next/no-literal-string": 0
         }
@@ -132,7 +131,7 @@ export const config = eslintTs.config(
         }
     },
     {
-        files: ["package.json", "package-lock.json"],
+        files: ["**/package.json", "**/package-lock.json"],
         rules: {
             "jsonc/sort-keys": "off"
         }
