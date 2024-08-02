@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.1.0 (2024-08-02)
+
+### Features
+
+-   removes import plugin from eslint config as it is not working ([#21](https://github.com/laverve/utilities/issues/21)) ([0a6499e](https://github.com/laverve/utilities/commit/0a6499e01808208391adeac340ec7b59f67171bb))
+
 ## 5.0.7 (2024-08-02)
 
 ### Bug Fixes
