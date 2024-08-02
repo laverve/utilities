@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.7 (2024-08-02)
+
+### Bug Fixes
+
+-   fixes typescript configuration ([#20](https://github.com/laverve/utilities/issues/20)) ([0307dad](https://github.com/laverve/utilities/commit/0307dadbbeea8c387d04ff425d65c7a6e98300fa))
+
 ## 5.0.6 (2024-07-31)
 
 ### Bug Fixes
