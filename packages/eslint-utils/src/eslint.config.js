@@ -70,10 +70,8 @@ export const config = eslintTs.config(
         },
         settings: {
             "import/resolver": {
-                typescript: {
-                    alwaysTryTypes: true,
-                    project
-                }
+                typescript: true,
+                node: true
             }
         },
         plugins: {
