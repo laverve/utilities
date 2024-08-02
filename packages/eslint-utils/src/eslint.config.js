@@ -6,29 +6,7 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 import reactPlugin from "eslint-plugin-react";
 import i18next from "eslint-plugin-i18next";
 
-import { fixupPluginRules } from "@eslint/compat";
-import { FlatCompat } from "@eslint/eslintrc";
-
-import { fileURLToPath } from "node:url";
-import { dirname } from "node:path";
-
 const project = "./tsconfig.eslint.json";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: eslintJs.configs.recommended
-});
-
-function legacyPlugin(name, alias = name) {
-    const plugin = compat.plugins(name)[0]?.plugins?.[alias];
-
-    if (!plugin) {
-        throw new Error(`Unable to resolve plugin ${name} and/or alias ${alias}`);
-    }
-
-    return fixupPluginRules(plugin);
-}
 
 export const config = eslintTs.config(
     {
@@ -60,26 +38,12 @@ export const config = eslintTs.config(
         ...config,
         files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"]
     })),
-    ...compat.extends("plugin:import/typescript"),
     {
         languageOptions: {
             parserOptions: {
                 project,
                 tsconfigRootDir: import.meta.dirname
             }
-        },
-        settings: {
-            "import/resolver": {
-                typescript: true,
-                node: true
-            }
-        },
-        plugins: {
-            import: legacyPlugin("eslint-plugin-import", "import")
-        },
-        rules: {
-            "import/prefer-default-export": 0,
-            "import/no-extraneous-dependencies": 0
         }
     },
     // START: prettier
