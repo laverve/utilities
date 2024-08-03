@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.2 (2024-08-03)
+
+### Bug Fixes
+
+-   execute Draft-Release only if tag is provided ([34149d5](https://github.com/laverve/utilities/commit/34149d5c7c378959980a95fa41e7c2bf34e6f241))
+
 ## 5.1.1 (2024-08-03)
 
 **Note:** Version bump only for package @laverve/eslint-utils
