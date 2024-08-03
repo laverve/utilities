@@ -74,6 +74,7 @@ jobs:
               with:
                 ref: ${{ needs.version.outputs.tag }}
             - name: Draft release
+              if: ${{ needs.version.outputs.tag != '' }}
               run: ${{ format('{0}/.github/scripts/release-drafter.sh', github.workspace) }} "${{ needs.version.outputs.tag }}"
               env:
                 GH_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
