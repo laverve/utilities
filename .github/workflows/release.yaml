@@ -7,8 +7,9 @@ env:
     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 jobs:
-  publishNpm:
+  Publish-NPM-Packages:
     runs-on: ubuntu-latest
+    concurrency: Publish-NPM-Packages
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
