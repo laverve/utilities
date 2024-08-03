@@ -62,9 +62,11 @@ jobs:
                   actor: "github-actions[bot]"
             - run: echo "Output Version ${{ steps.versionBump.outputs.tag }}"
 
-    draftRelease:
+    Draft-Release:
         needs: version
         runs-on: ubuntu-latest
+
+        concurrency: Draft-Release
 
         steps:
             - name: Checkout
