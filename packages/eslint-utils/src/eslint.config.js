@@ -6,8 +6,6 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 import reactPlugin from "eslint-plugin-react";
 import i18next from "eslint-plugin-i18next";
 
-const project = "./tsconfig.eslint.json";
-
 export const config = eslintTs.config(
     {
         ignores: [
@@ -38,14 +36,6 @@ export const config = eslintTs.config(
         ...config,
         files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"]
     })),
-    {
-        languageOptions: {
-            parserOptions: {
-                project,
-                tsconfigRootDir: import.meta.dirname
-            }
-        }
-    },
     // START: prettier
     {
         ...eslintPluginPrettierRecommended
