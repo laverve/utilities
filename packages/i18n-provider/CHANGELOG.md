@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.5 (2024-09-14)
+
+**Note:** Version bump only for package @laverve/i18n-provider
+
 ## 5.1.4 (2024-08-31)
 
 **Note:** Version bump only for package @laverve/i18n-provider
