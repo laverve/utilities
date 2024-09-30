@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.9 (2024-09-30)
+
+**Note:** Version bump only for package laverve-monorepo
+
 ## 5.1.8 (2024-09-28)
 
 **Note:** Version bump only for package laverve-monorepo
