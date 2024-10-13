@@ -20,9 +20,6 @@
     "references": [
         {
             "path": "./packages/test"
-        },
-        {
-            "path": "./packages/i18n-provider"
         }
     ]
 }
