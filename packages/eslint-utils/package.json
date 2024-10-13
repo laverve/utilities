@@ -19,9 +19,6 @@
         "prettier": "^3.0.3",
         "typescript-eslint": "^8.0.0-alpha.45"
     },
-    "peerDependencies": {
-        "typescript": "^5.2.2"
-    },
     "description": "This module offers a set of utils for linting.",
     "keywords": [
         "eslint",
