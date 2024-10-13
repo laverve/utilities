@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.11 (2024-10-13)
+
+### Bug Fixes
+
+-   **eslint-utils:** removes typescript from peer dependencies ([bbdbfc7](https://github.com/laverve/utilities/commit/bbdbfc7d98283998dcbdb1a553a3cb0d944fcfb1))
+
 ## 5.1.10 (2024-10-12)
 
 **Note:** Version bump only for package @laverve/eslint-utils
