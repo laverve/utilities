@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.18 (2024-12-02)
+
+**Note:** Version bump only for package @laverve/test-utils
+
 ## 5.1.17 (2024-11-27)
 
 **Note:** Version bump only for package @laverve/test-utils
@@ -31,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   **eslint-utils:** removes typescript from peer dependencies ([bbdbfc7](https://github.com/laverve/utilities/commit/bbdbfc7d98283998dcbdb1a553a3cb0d944fcfb1))
+- **eslint-utils:** removes typescript from peer dependencies ([bbdbfc7](https://github.com/laverve/utilities/commit/bbdbfc7d98283998dcbdb1a553a3cb0d944fcfb1))
 
 ## 5.1.10 (2024-10-12)
 
@@ -69,7 +73,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   execute Draft-Release only if tag is provided ([34149d5](https://github.com/laverve/utilities/commit/34149d5c7c378959980a95fa41e7c2bf34e6f241))
+- execute Draft-Release only if tag is provided ([34149d5](https://github.com/laverve/utilities/commit/34149d5c7c378959980a95fa41e7c2bf34e6f241))
 
 ## 5.1.1 (2024-08-03)
 
@@ -79,25 +83,25 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
--   removes import plugin from eslint config as it is not working ([#21](https://github.com/laverve/utilities/issues/21)) ([0a6499e](https://github.com/laverve/utilities/commit/0a6499e01808208391adeac340ec7b59f67171bb))
+- removes import plugin from eslint config as it is not working ([#21](https://github.com/laverve/utilities/issues/21)) ([0a6499e](https://github.com/laverve/utilities/commit/0a6499e01808208391adeac340ec7b59f67171bb))
 
 ## 5.0.7 (2024-08-02)
 
 ### Bug Fixes
 
--   fixes typescript configuration ([#20](https://github.com/laverve/utilities/issues/20)) ([0307dad](https://github.com/laverve/utilities/commit/0307dadbbeea8c387d04ff425d65c7a6e98300fa))
+- fixes typescript configuration ([#20](https://github.com/laverve/utilities/issues/20)) ([0307dad](https://github.com/laverve/utilities/commit/0307dadbbeea8c387d04ff425d65c7a6e98300fa))
 
 ## 5.0.6 (2024-07-31)
 
 ### Bug Fixes
 
--   disables i18nex/no-literal-string rule for stories ([#19](https://github.com/laverve/utilities/issues/19)) ([ec77632](https://github.com/laverve/utilities/commit/ec776328aa1b9752aa863225c6d9ecc4f7b95a7b))
+- disables i18nex/no-literal-string rule for stories ([#19](https://github.com/laverve/utilities/issues/19)) ([ec77632](https://github.com/laverve/utilities/commit/ec776328aa1b9752aa863225c6d9ecc4f7b95a7b))
 
 ## 5.0.5 (2024-07-31)
 
 ### Bug Fixes
 
--   disables i18nex/no-literal-string rule for stories ([#18](https://github.com/laverve/utilities/issues/18)) ([075a3a4](https://github.com/laverve/utilities/commit/075a3a47baebcabf1ad90792fadaa4bec27a3b17))
+- disables i18nex/no-literal-string rule for stories ([#18](https://github.com/laverve/utilities/issues/18)) ([075a3a4](https://github.com/laverve/utilities/commit/075a3a47baebcabf1ad90792fadaa4bec27a3b17))
 
 ## 5.0.4 (2024-07-31)
 
@@ -115,19 +119,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
--   improves eslint configuration ([#10](https://github.com/laverve/utilities/issues/10)) ([313f160](https://github.com/laverve/utilities/commit/313f1601615df78c6fdf4659962c8ead2500daa8))
+- improves eslint configuration ([#10](https://github.com/laverve/utilities/issues/10)) ([313f160](https://github.com/laverve/utilities/commit/313f1601615df78c6fdf4659962c8ead2500daa8))
 
 # 5.0.0 (2024-07-21)
 
--   chore!: adds eslint-plugin-import and eslint-plugin-i18next (#7) ([c301d10](https://github.com/laverve/utilities/commit/c301d10b7ebfc3e0fd2af3d24f1c8e51a6ae3d34)), closes [#7](https://github.com/laverve/utilities/issues/7)
+- chore!: adds eslint-plugin-import and eslint-plugin-i18next (#7) ([c301d10](https://github.com/laverve/utilities/commit/c301d10b7ebfc3e0fd2af3d24f1c8e51a6ae3d34)), closes [#7](https://github.com/laverve/utilities/issues/7)
 
 ### BREAKING CHANGES
 
--   added plugins to lint imports and i18next
+- added plugins to lint imports and i18next
 
--   chore: turns off `i18next/no-literal-string` rule for spec files
+- chore: turns off `i18next/no-literal-string` rule for spec files
 
--   chore: adds more custom rules
+- chore: adds more custom rules
 
 ## 4.0.3 (2024-07-21)
 
@@ -143,11 +147,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 4.0.0 (2024-07-20)
 
--   feat!: adds eslint-plugin-react (#6) ([b9dac9d](https://github.com/laverve/utilities/commit/b9dac9d4e665c286db195bb0b6f465d629f83349)), closes [#6](https://github.com/laverve/utilities/issues/6)
+- feat!: adds eslint-plugin-react (#6) ([b9dac9d](https://github.com/laverve/utilities/commit/b9dac9d4e665c286db195bb0b6f465d629f83349)), closes [#6](https://github.com/laverve/utilities/issues/6)
 
 ### BREAKING CHANGES
 
--   adds eslint-plugin-react into eslint config
+- adds eslint-plugin-react into eslint config
 
 ## 3.0.1 (2024-07-19)
 
@@ -155,11 +159,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 3.0.0 (2024-07-19)
 
--   fix!: removes setupTests.ts from default jest config ([d1e8a02](https://github.com/laverve/utilities/commit/d1e8a021f66f9fe5b6f61b29eb285c0e330ea65d))
+- fix!: removes setupTests.ts from default jest config ([d1e8a02](https://github.com/laverve/utilities/commit/d1e8a021f66f9fe5b6f61b29eb285c0e330ea65d))
 
 ### BREAKING CHANGES
 
--   setupFilesAfterEnv is removed
+- setupFilesAfterEnv is removed
 
 ## 2.0.7 (2024-07-18)
 
@@ -193,11 +197,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### chore
 
--   adds packages ([b34dcac](https://github.com/laverve/utilities/commit/b34dcacd96239ace9ab9558e3cf0047a0785c628))
+- adds packages ([b34dcac](https://github.com/laverve/utilities/commit/b34dcacd96239ace9ab9558e3cf0047a0785c628))
 
 ### BREAKING CHANGES
 
--   moved packages from a common repo
+- moved packages from a common repo
 
 ## 1.0.10 (2024-07-16)
 
