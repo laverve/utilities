@@ -5,12 +5,12 @@
         "url": "https://github.com/laverve/utilities/issues"
     },
     "dependencies": {
-        "react": "^18.2.0"
+        "react": "^19.0.0"
     },
     "description": "This is a monorepo for all the products/components laverve is offering",
     "devDependencies": {
         "@eslint/js": "^9.7.0",
-        "@types/react": "^18.2.21",
+        "@types/react": "^19.0.6",
         "browserslist": "^4.22.1",
         "copyfiles": "^2.4.1",
         "eslint": "^9.7.0",
