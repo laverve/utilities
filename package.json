@@ -5,7 +5,7 @@
         "url": "https://github.com/laverve/utilities/issues"
     },
     "dependencies": {
-        "react": "^18.2.0"
+        "react": "^19.0.0"
     },
     "description": "This is a monorepo for all the products/components laverve is offering",
     "devDependencies": {
