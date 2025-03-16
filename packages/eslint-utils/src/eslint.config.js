@@ -4,11 +4,13 @@ import eslintPluginJsonc from "eslint-plugin-jsonc";
 import eslintTs from "typescript-eslint";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import eslintPluginCommentsRecommended from "@eslint-community/eslint-plugin-eslint-comments/configs";
+import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import reactPlugin from "eslint-plugin-react";
 import i18next from "eslint-plugin-i18next";
 
 export const config = eslintTs.config(
     eslintPluginCommentsRecommended.recommended,
+    eslintPluginReactHooks.configs["recommended-latest"],
     {
         ignores: [
             "dist/",
