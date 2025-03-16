@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.2.0 (2025-03-16)
+
+### Features
+
+- **eslint-utils:** adds @eslint-community/eslint-plugin-eslint-comments plugin ([c2f96c5](https://github.com/laverve/utilities/commit/c2f96c5ea070956ea6dbe31113f384b8caeede78))
+
 ## 5.1.21 (2025-02-21)
 
 **Note:** Version bump only for package laverve-monorepo

@@ -5,10 +5,10 @@
         "url": "https://github.com/laverve/utilities/issues"
     },
     "dependencies": {
+        "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
         "@eslint/compat": "^1.1.1",
         "@eslint/eslintrc": "^3.1.0",
         "@eslint/js": "^9.7.0",
-        "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
         "eslint": "^9.7.0",
         "eslint-config-prettier": "^10.0.1",
         "eslint-plugin-i18next": "^6.0.9",
@@ -53,6 +53,6 @@
         "lint:staged": "lint-staged",
         "build": "tsc"
     },
-    "version": "5.1.21",
+    "version": "5.2.0",
     "webpack": "./src/index.ts"
 }
