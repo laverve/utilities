@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.3.0 (2025-03-16)
+
+### Features
+
+- **eslint-utils:** adds eslint plugin jest ([196bf38](https://github.com/laverve/utilities/commit/196bf380163fdb001ddea24b111ba9f3fcb1f4d0))
+
 # 5.2.0 (2025-03-16)
 
 ### Features
