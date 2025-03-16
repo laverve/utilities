@@ -8,6 +8,7 @@
         "@eslint/compat": "^1.1.1",
         "@eslint/eslintrc": "^3.1.0",
         "@eslint/js": "^9.7.0",
+        "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
         "eslint": "^9.7.0",
         "eslint-config-prettier": "^10.0.1",
         "eslint-plugin-i18next": "^6.0.9",
@@ -17,7 +18,7 @@
         "globals": "^15.8.0",
         "lint-staged": "^15.1.0",
         "prettier": "^3.0.3",
-        "typescript-eslint": "^8.0.0-alpha.45"
+        "typescript-eslint": "^8.26.1"
     },
     "description": "This module offers a set of utils for linting.",
     "keywords": [
@@ -36,6 +37,10 @@
         "README.md",
         "LICENSE"
     ],
+    "peerDependencies": {
+        "eslint": "^9.x.x",
+        "typescript-eslint": "^8.x.x"
+    },
     "publishConfig": {
         "access": "public"
     },

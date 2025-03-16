@@ -3,10 +3,12 @@ import globals from "globals";
 import eslintPluginJsonc from "eslint-plugin-jsonc";
 import eslintTs from "typescript-eslint";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import eslintPluginCommentsRecommended from "@eslint-community/eslint-plugin-eslint-comments/configs";
 import reactPlugin from "eslint-plugin-react";
 import i18next from "eslint-plugin-i18next";
 
 export const config = eslintTs.config(
+    eslintPluginCommentsRecommended.recommended,
     {
         ignores: [
             "dist/",
