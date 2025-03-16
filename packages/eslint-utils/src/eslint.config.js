@@ -7,6 +7,7 @@ import eslintPluginCommentsRecommended from "@eslint-community/eslint-plugin-esl
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import reactPlugin from "eslint-plugin-react";
 import i18next from "eslint-plugin-i18next";
+import eslintPluginJest from "eslint-plugin-jest";
 
 export const config = eslintTs.config(
     eslintPluginCommentsRecommended.recommended,
@@ -91,6 +92,12 @@ export const config = eslintTs.config(
         rules: {
             "jsonc/sort-keys": "off"
         }
-    }
+    },
     // END: jsonc
+    // START: Jest
+    {
+        ...eslintPluginJest.configs["flat/recommended"],
+        files: ["**/*.spec.ts", "**/*.spec.tsx", "**/*.spec.js", "**/*.spec.jsx"]
+    }
+    // END: Jest
 );
