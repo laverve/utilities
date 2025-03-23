@@ -57,6 +57,7 @@ export const config = eslintTs.config(
         },
         rules: {
             ...reactPlugin.configs.flat.recommended.rules,
+            "react/react-in-jsx-scope": "off",
             "react/require-default-props": 0,
             "react/function-component-definition": [
                 2,
