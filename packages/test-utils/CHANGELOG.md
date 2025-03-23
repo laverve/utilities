@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.1 (2025-03-23)
+
+### Bug Fixes
+
+- **eslint:** turns off rull react/react-in-jsx-scope ([12f70a7](https://github.com/laverve/utilities/commit/12f70a7f4931ad7e96eb0e134785f62807d39e75))
+
 # 5.3.0 (2025-03-16)
 
 ### Features
