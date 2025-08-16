@@ -6,19 +6,19 @@
     },
     "dependencies": {
         "@jest/globals": "^30.0.5",
-        "@testing-library/jest-dom": "^6.6.3",
-        "@testing-library/react": "^16.0.0",
-        "@testing-library/user-event": "^14.5.1",
+        "@testing-library/jest-dom": "^6.7.0",
+        "@testing-library/react": "^16.3.0",
+        "@testing-library/user-event": "^14.6.1",
         "@types/jest": "^30.0.0",
-        "@types/react-test-renderer": "^19.0.0",
+        "@types/react-test-renderer": "^19.1.0",
         "jest": "^30.0.5",
         "jest-environment-jsdom": "^30.0.5",
         "jest-watch-typeahead": "^3.0.1",
-        "react": "^19.0.0",
+        "react": "^19.1.1",
         "react-app-polyfill": "^3.0.0",
-        "react-test-renderer": "^19.0.0",
+        "react-test-renderer": "^19.1.1",
         "snapshot-diff": "^0.10.0",
-        "ts-jest": "^29.1.1"
+        "ts-jest": "^29.4.1"
     },
     "description": "This module offers a set of utils for testing.",
     "keywords": [
